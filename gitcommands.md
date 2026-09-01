@@ -1,4 +1,4 @@
-# 1. Clone the repository
+## 1. Clone the repository
 git clone <REPOSITORY-URL>
 
 # 2. Enter the project
