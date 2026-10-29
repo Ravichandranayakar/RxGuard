@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F8FAFC] text-slate-800 antialiased font-sans min-h-screen selection:bg-teal-100 selection:text-teal-900;
+  }
+}
+
+/* Crisp Clean Medical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0F766E;
+}
+
+.hospital-card {
+  @apply bg-white border border-slate-200/80 rounded-xl shadow-sm hover:shadow-hospital-md transition-all duration-200;
+}
