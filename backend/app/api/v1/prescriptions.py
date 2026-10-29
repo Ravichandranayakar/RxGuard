@@ -1,4 +1,8 @@
+import io
+import base64
+import qrcode
 from fastapi import APIRouter, Depends
+from fastapi.responses import Response
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from app.db.session import get_db
@@ -52,6 +56,35 @@ async def get_prescription_details(
             "revocation_reason": rx.revocation_reason
         }
     )
+
+@router.get("/{prescription_id}/qr")
+async def get_prescription_qr(
+    prescription_id: str,
+    db: AsyncSession = Depends(get_db)
+):
+    """Generates a downloadable high-resolution PNG QR code for the prescription."""
+    stmt = select(Prescription).where(Prescription.prescription_id == prescription_id)
+    res = await db.execute(stmt)
+    rx = res.scalar_one_or_none()
+    if not rx:
+        raise NotFoundError(f"Prescription {prescription_id} not found.")
+
+    # QR Code encodes only the opaque verification token (NO PHI)
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_M,
+        box_size=10,
+        border=4,
+    )
+    qr.add_data(rx.qr_token)
+    qr.make(fit=True)
+
+    img = qr.make_image(fill_color="#0F766E", back_color="white")
+    buf = io.BytesIO()
+    img.save(buf, format="PNG")
+    buf.seek(0)
+
+    return Response(content=buf.getvalue(), media_type="image/png")
 
 @router.post("/{prescription_id}/revoke", response_model=APIResponse)
 async def revoke_prescription(

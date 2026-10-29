@@ -1,5 +1,5 @@
 ## 1. Clone the repository
-git clone <REPOSITORY-URL>
+git clone https://github.com/Ravichandranayakar/RxGuard.git
 
 ## 2. Enter the project
 cd RxGuard
