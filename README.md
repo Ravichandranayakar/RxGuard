@@ -13,7 +13,7 @@
 
 ##  Foundational Architectural Invariant: Zero On-Chain PHI
 
-> **Core Healthcare Privacy Principle:** Blockchain is strictly the shared verification, state machine, and tamper-evident audit layer — **NOT a database for storing private patient health records (PHI).**
+> **Core Healthcare Privacy Principle:** Blockchain is strictly the shared verification, state machine, and tamper-evident audit layer, **NOT a database for storing private patient health records (PHI).**
 >
 > All clinical records, patient demographics, and diagnostic regimens remain strictly **off-chain**, encrypted at rest using **AES-256-GCM** authenticated encryption with unique 96-bit nonces. Only opaque UUID references, canonical SHA-256 payload hashes, doctor public key signatures, and authorized pill counts are anchored to the permissioned **Hyperledger Fabric** ledger (`rxguardchannel`).
 
@@ -55,13 +55,13 @@ RxGuard enforces strict separation of clinical duties across independent consort
 │  Dr. Sarah Smith, MD (HospitalMSP)     │       │  Marcus Vance, PharmD (PharmacyMSP)    │
 │  Metro General Hospital                │       │  CareFirst Retail Pharmacy Network     │
 ├────────────────────────────────────────┤       ├────────────────────────────────────────┤
-│  ✅ Allowed:                           │       │  ✅ Allowed:                           │
+│  Allowed:                           │       │   Allowed:                           │
 │  • Diagnose Patients                   │       │  • Scan / Paste Patient QR Tokens      │
 │  • Author Medication Regimens          │       │  • Execute Cryptographic Audit         │
 │  • Sign with ECDSA Private Key         │       │  • Verify Remaining Ledger Balance     │
 │  • Generate Scannable QR Passes        │       │  • Commit Atomic Dispense Operation    │
 │                                        │       │                                        │
-│  ⛔ Strictly Restricted:               │       │  ⛔ Strictly Restricted:               │
+│  Strictly Restricted:               │       │  Strictly Restricted:               │
 │  • CANNOT dispense pharmacy inventory  │       │  • CANNOT create prescriptions         │
 │  • CANNOT record dispense transactions │       │  • CANNOT alter patient records        │
 └────────────────────────────────────────┘       └────────────────────────────────────────┘
