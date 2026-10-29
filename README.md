@@ -17,22 +17,6 @@
 >
 > All clinical records, patient demographics, and diagnostic regimens remain strictly **off-chain**, encrypted at rest using **AES-256-GCM** authenticated encryption with unique 96-bit nonces. Only opaque UUID references, canonical SHA-256 payload hashes, doctor public key signatures, and authorized pill counts are anchored to the permissioned **Hyperledger Fabric** ledger (`rxguardchannel`).
 
----
-
-##  Project Team & Academic Record
-
-**Presidency University, Bengaluru**  
-**School of Computer Science and Engineering | B.Tech CSE (Academic Year 2026–2027)**
-
-| Name | University Seat Number (USN) | Role / Core Responsibilities |
-| :--- | :--- | :--- |
-| **Ravichandra Nayakar H** | `20241CSE0987` | Lead Architect & Security Engineering |
-| **Hemanth V** | `20241CSE1000` | Blockchain & Smart Contracts (Chaincode) |
-| **Vikas H N** | `20241CSE1011` | Backend REST API & Relational Database |
-| **Mohan Kumar A** | `20241CSE0977` | Frontend Engineering & Clinical UI/UX |
-| **Pavan Kumar N** | `20241CSE0968` | Cryptographic Protocols & Serialization |
-
----
 
 ##  Clinical Problem vs. RxGuard Solution
 
