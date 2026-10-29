@@ -1,4 +1,4 @@
-# 🛡️ RxGuard: A Blockchain-Based Prescription Verification and Dispensing System
+# RxGuard: A Blockchain-Based Prescription Verification and Dispensing System
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-teal.svg)](https://opensource.org/licenses/MIT)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111.0-009688.svg?logo=fastapi)](https://fastapi.tiangolo.com)
@@ -11,7 +11,7 @@
 
 ---
 
-## 🏛️ Foundational Architectural Invariant: Zero On-Chain PHI
+##  Foundational Architectural Invariant: Zero On-Chain PHI
 
 > **Core Healthcare Privacy Principle:** Blockchain is strictly the shared verification, state machine, and tamper-evident audit layer — **NOT a database for storing private patient health records (PHI).**
 >
@@ -19,7 +19,7 @@
 
 ---
 
-## 👥 Project Team & Academic Record
+##  Project Team & Academic Record
 
 **Presidency University, Bengaluru**  
 **School of Computer Science and Engineering | B.Tech CSE (Academic Year 2026–2027)**
@@ -35,7 +35,7 @@
 
 ---
 
-## 🏥 Clinical Problem vs. RxGuard Solution
+##  Clinical Problem vs. RxGuard Solution
 
 | Problem in Traditional Healthcare | How RxGuard Solves It |
 | :--- | :--- |
@@ -46,7 +46,7 @@
 
 ---
 
-## 🔐 Strict Role-Based Access Control (RBAC) Architecture
+##  Strict Role-Based Access Control (RBAC) Architecture
 
 RxGuard enforces strict separation of clinical duties across independent consortium organizations:
 
@@ -69,7 +69,7 @@ RxGuard enforces strict separation of clinical duties across independent consort
 
 ---
 
-## 📐 System Architecture Topology
+##  System Architecture Topology
 
 ```mermaid
 flowchart TD
@@ -120,7 +120,7 @@ flowchart TD
 
 ---
 
-## 🖥️ Workstation Screens & Features
+## Workstation Screens & Features
 
 ### 1. Physician Portal (Doctor Workspace)
 * **Prescriber Identity:** Connected as `Dr. Sarah Smith, MD` under `HospitalMSP`.
@@ -185,7 +185,7 @@ npm run dev
 
 ---
 
-## 🔑 Access Endpoints & Demo Credentials
+##  Access Endpoints & Demo Credentials
 
 | Service | Local URL | Description |
 | :--- | :--- | :--- |
@@ -205,7 +205,7 @@ npm run dev
 
 ---
 
-## 🎬 Live Demonstration Script (For Evaluators & Viva)
+##  Live Demonstration Script (For Evaluators & Viva)
 
 1. **Step 1 — Show Consortium & RBAC:**
    * Open [`http://localhost:3000`](http://localhost:3000). Show the top navbar connected to `HospitalMSP | Metro General Hospital`.
@@ -232,7 +232,7 @@ npm run dev
 
 ---
 
-## 🧪 Automated Testing & Security Verification
+##  Automated Testing & Security Verification
 
 ```powershell
 # 1. Run Complete End-to-End Lifecycle Test
@@ -249,7 +249,7 @@ go test -v ./...
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 RxGuard/
@@ -280,7 +280,7 @@ RxGuard/
 
 ---
 
-## 📚 Technical Documentation Directory
+## Technical Documentation Directory
 
 * [`docs/IMPLEMENTATION_PLAN.md`](docs/IMPLEMENTATION_PLAN.md): Full milestone tracking across all 10 phases.
 * [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md): Component topology, MSP boundaries, and concurrency models.
