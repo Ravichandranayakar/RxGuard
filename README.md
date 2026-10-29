@@ -31,7 +31,6 @@
 | **Vikas H N** | `20241CSE1011` | Backend REST API & Relational Database |
 | **Mohan Kumar A** | `20241CSE0977` | Frontend Engineering & Clinical UI/UX |
 | **Pavan Kumar N** | `20241CSE0968` | Cryptographic Protocols & Serialization |
-| **Yashwanth DD** | `20241CSE1020` | QA, Concurrency & MVCC Testing |
 
 ---
 
